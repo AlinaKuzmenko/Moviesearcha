@@ -1,0 +1,69 @@
+@import '../../theme/palette';
+
+
+.header {
+    min-width: 920px;
+    background-color: $paletteColor7;
+    text-align: center;
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 16px;
+        text-align: center;
+        text-transform: uppercase;
+
+        a {
+            color: $paletteColor1;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+
+    form {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 500px;
+        margin: 0 auto 50px;
+
+        [type='text'] {
+            width: 70%;
+            padding: 10px;
+            border: 0;
+            outline: 0;
+            color: $paletteColor6;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        background-color: $paletteColor6;
+
+        a {
+            padding: 0 20px;
+            transition: background-color .5s, color .5s;
+            color: $paletteColor1;
+            font-size: 12px;
+            line-height: 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &.active {
+                background-color: $paletteColor7;
+                color: $paletteColor1;
+                
+                &:hover {
+                    background-color: $paletteColor7;
+                }
+            }
+
+            &:hover {
+                background-color: lighten($paletteColor6, 5%);
+                color: $paletteColor1;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import '../../theme/palette';
+
+
+.favourites {
+    position: absolute;
+    top: 155px;
+    left: 50px;
+    width: 220px;
+
+    header {
+        padding: 10px;
+        background-color: $paletteColor6;
+        color: $paletteColor1;
+    }
+
+    ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: lighten($paletteColor6, 85%);
+
+        li {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 5px;
+            border-bottom: 1px solid $paletteColor9;
+            color: $paletteColor6;
+            text-decoration: none;
+
+            img {
+                height: 50px;
+                margin-right: 10px;
+            }
+        }
+
+        .liAppear {
+            opacity: .1;
+        }
+
+        .liAppearActive {
+            opacity: 1;
+        }
+
+        .liEnter {
+            opacity: .1;
+        }
+
+        .liEnterActive {
+            transition: opacity .3s;
+            opacity: 1;
+        }
+
+        .liExit {
+            opacity: 1;
+        }
+
+        .liExitActive {
+            transition: opacity .3s;
+            opacity: .1;
+        }
+
+        .noMoviesAppear {
+            opacity: .1;
+        }
+
+        .noMoviesAppearActive {
+            opacity: 1;
+        }
+
+        .noMoviesEnter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .1;
+        }
+
+        .noMoviesEnterActive {
+            transition: opacity .3s;
+            opacity: 1;
+        }
+
+        .noMoviesExit {
+            opacity: 1;
+        }
+
+        .noMoviesExitActive {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.star {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.starActive {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    filter: grayscale(0%);
+}

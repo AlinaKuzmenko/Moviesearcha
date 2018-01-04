@@ -1,0 +1,117 @@
+@import '../../theme/palette';
+
+
+.modal {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 70px;
+
+    header {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $paletteColor8;
+        color: $paletteColor1;
+
+        h2 {
+            margin: 5px 20px;
+        }
+        .close {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: $paletteColor9;
+
+        img {
+            height: 200px;
+        }
+
+        .info {
+
+            p {
+                display: flex;
+                margin: 10px 0 10px 20px;
+                font-size: 12px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                mark {
+                    display: inline-block;
+                    padding-right: 3px;
+                    background-color: transparent;
+                    font-weight: 700;
+
+                    &::first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+
+                span {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.modalAppearActive {
+    animation: showModal .7s cubic-bezier(.5, 0, .84, .24);
+}
+
+.modalEnterActive {
+    animation: showModal .7s cubic-bezier(0, 0, .84, .24);
+}
+
+.modalExit {
+    animation: showModal .7s cubic-bezier(0, 0, .84, .24);
+}
+
+.modalExitActive {
+    animation: showModal .7s cubic-bezier(0, 0, .84, .24);
+}
+
+@keyframes showModal {
+    0% {
+        transform: rotateX(-180deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes hideModal {
+    0% {
+        transform: rotateX(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateX(-180deg);
+        opacity: 1;
+    }
+}

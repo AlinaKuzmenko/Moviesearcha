@@ -1,0 +1,65 @@
+exclude:
+  - 'node_modules/**'
+  - 'development/components/Console/*/*.scss'
+  - 'development/components/CoursesList/*/*.scss'
+  - 'development/components/CoursesView/*/*.scss'
+  - 'development/components/CoursesViewHost/*/*.scss'
+  - 'development/components/Lesson/*/*.scss'
+  - 'development/components/ReactCourseView/*/*.scss'
+  - 'development/components/Status/*/*.scss'
+  - 'development/components/_component/*/*.scss'
+
+linters:
+  PropertySortOrder:
+    order: smacss
+
+  SelectorFormat:
+    convention: camel_case
+
+  EmptyLineBetweenBlocks:
+    enabled: false
+
+  NameFormat:
+    convention: camel_case
+
+  Indentation:
+    width: 4
+
+  SelectorDepth:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
+
+  UnnecessaryParentReference:
+    enabled: false
+
+  Comment:
+    enabled: false
+
+  HexNotation:
+    style: uppercase
+
+  PropertySpelling:
+    enabled: true
+    extra_properties:
+      - grid-template-columns
+      - grid-template-rows
+      - grid-gap
+      - grid-column-gap
+      - grid-row-gap
+      - justify-items
+
+  PropertyUnits:
+    enabled: true
+    global: ['%', 'Hz', 'ch', 'cm', 'deg', 'dpcm', 'dpi', 'dppx', 'em', 'ex', 'fr', 'grad', 'in', 'kHz', 'mm', 'ms', 'pc', 'pt', 'px', 'q', 'rad', 'rem', 's', 'turn', 'vh', 'vmax', 'vmin', 'vw']
+
+  VendorPrefix:
+    enabled: true
+    excluded_identifiers: ['user-select', '-moz-placeholder']
+
+  ElsePlacement:
+    enabled: false
+
+  SingleLinePerSelector:
+    enabled: false

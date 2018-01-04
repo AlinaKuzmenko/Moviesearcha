@@ -1,0 +1,76 @@
+@import '../../theme/palette';
+
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin: 0 5px 10px;
+    padding: 10px;
+    background-color: $paletteColor9;
+
+    a {
+        width: 100%;
+        color: $paletteColor6;
+        text-decoration: none;
+
+        &:hover {
+            color: $paletteColor6;
+            text-decoration: none;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0 0;
+            color: $paletteColor6;
+
+            img {
+                width: 100%;
+            }
+
+            figcaption {
+                position: relative;
+                margin-top: 5px;
+                color: $paletteColor6;
+
+                h3 {
+                    margin: 10px 0 0;
+                    color: $paletteColor6;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                p {
+                    margin: 5px 0;
+                    font-size: 12px;
+                }
+
+                span {
+                    display: block;
+                    margin-bottom: 3px;
+                    padding: 2px;
+                    border-radius: 3px;
+                    background-color: lighten($paletteColor7, 20%);
+                    color: $paletteColor1;
+                    font-size: 10px;
+                    line-height: 12px;
+
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.movieAppear {
+    opacity: 0;
+}
+
+.movieAppearActive {
+    transition: opacity .7s;
+    opacity: 1;
+}
